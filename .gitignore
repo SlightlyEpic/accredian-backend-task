@@ -7,3 +7,4 @@ dist
 # secrets
 .env*
 !.env.sample
+prisma/ca.pem
