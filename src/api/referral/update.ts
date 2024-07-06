@@ -47,6 +47,8 @@ const handler: (deps: Dependencies) => RequestHandler = (deps: Dependencies) => 
 
         return res.json({
             msg: 'Success',
+            referrerName: referral.referrerName,
+            referredName: referral.referredName,
         });
     } catch(err) {
         return res.status(500).json({
