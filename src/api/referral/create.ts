@@ -5,9 +5,9 @@ import { z } from 'zod';
 
 const bodySchema = z.object({
     referrerEmail: z.string().email("Must be an email."),
-    referrerName: z.string().min(1, "Cannot be empty").max(15, "Cannot be longer than 15 characters"),
+    referrerName: z.string().min(1, "Cannot be empty").max(30, "Cannot be longer than 15 characters"),
     referredEmail: z.string().email("Must be an email."),
-    referredName: z.string().min(1, "Cannot be empty").max(15, "Cannot be longer than 15 characters"),
+    referredName: z.string().min(1, "Cannot be empty").max(30, "Cannot be longer than 15 characters"),
 });
 
 interface Dependencies {
