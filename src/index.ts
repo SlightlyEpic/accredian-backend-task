@@ -1,10 +1,20 @@
 import 'dotenv/config';
 import express from 'express';
 
+import apiRouter from './api/apiRouter';
+import { createPrismaClient } from './lib/prisma';
+import { createNodemailer } from './lib/nodemailer';
+
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello world');
-});
+const prisma = createPrismaClient();
+const nodemailer = createNodemailer();
 
-app.listen(3000);
+app.use(apiRouter({
+    prisma,
+    nodemailer,
+}));
+
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on port ${process.env.PORT}`);
+});
