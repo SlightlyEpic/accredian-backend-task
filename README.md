@@ -22,3 +22,5 @@ Video demo:
 https://github.com/SlightlyEpic/accredian-backend-task/assets/42976178/1a2f6110-8c2d-471f-b6f7-ed2db10e3c71
 
 **(The first form submission might take time to load due to render's cold start)**
+
+PS: Ideally, the referral system should be protected by auth but since that wasn't asked I did not add auth.
