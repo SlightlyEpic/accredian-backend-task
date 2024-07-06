@@ -10,7 +10,7 @@ const app = express();
 const prisma = createPrismaClient();
 const nodemailer = createNodemailer();
 
-app.use(apiRouter({
+app.use('/api', apiRouter({
     prisma,
     nodemailer,
 }));
